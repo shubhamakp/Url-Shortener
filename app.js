@@ -68,10 +68,10 @@ app.get('/:shortUrl', async (req, res) => {
     const shortUrl = await ShortUrl.findOne({ urlCode: req.params.shortUrl })
     console.log(shortUrl);
     if (shortUrl==null) {
-    res.sendStatus(404);
+      res.sendStatus(404);
     }  
     else
-    res.redirect(shortUrl.longUrl)
+      res.redirect(shortUrl.longUrl)
   })
 
 app.listen(port, () => console.log(`server started at ${port}`));

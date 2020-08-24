@@ -49,12 +49,14 @@
       <tbody>
         <% shortUrls.forEach(shortUrl => { %>
           <tr>
-            <td><a href="<%= shortUrl.longUrl %>" target="_blank"><%= shortUrl.longUrl %></a></td>
-            <td><a href="<%= shortUrl.shorturl %>" target="_blank"><%= shortUrl.shorturl %></a></td>
+            <td><a class="longurl" href="<%= shortUrl.longUrl %>" target="_blank"><%= shortUrl.longUrl %></a></td>
+            <td><a class="shorturl" href="<%= shortUrl.shorturl %>" target="_blank"><%= shortUrl.shorturl %></a></td>
           </tr>
         <% }) %>
       </tbody>
     </table>
   </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
