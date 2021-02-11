@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title>Url Shrinker</title>
   <style type="text/css">
-  html,body{
-    height: 100%;
-    width: 100%;
-  }
-    body{
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
       background-image: url('https://raw.githubusercontent.com/minhajkk/nodejs-url-shortener/master/public/img/bg.jpg');
       background-repeat: no-repeat;
     }
-    .container{
+
+    .container {
       margin-top: 5%;
     }
-    h4,h1{
+
+    h4,
+    h1 {
       text-align: center;
       font-size: 320%;
-      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif 
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
     }
-    h4{
+
+    h4 {
       margin-top: 20px;
       font-size: 190%;
     }
+
+    a{
+      color :darkviolet;
+    }
+    a:hover {
+      color  :red;
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h1>URL Shrinker</h1>
@@ -38,7 +54,7 @@
       <input required placeholder="Url" type="url" name="fullUrl" id="fullUrl" class="form-control col mr-2">
       <button class="btn btn-success" type="submit">Shrink</button>
     </form>
-    
+
     <table class="table table-striped table-responsive">
       <thead>
         <tr>
@@ -48,10 +64,10 @@
       </thead>
       <tbody>
         <% shortUrls.forEach(shortUrl => { %>
-          <tr>
-            <td><a class="longurl" href="<%= shortUrl.longUrl %>" target="_blank"><%= shortUrl.longUrl %></a></td>
-            <td><a class="shorturl" href="<%= shortUrl.shorturl %>" target="_blank"><%= shortUrl.shorturl %></a></td>
-          </tr>
+        <tr>
+          <td><a class="longurl" href="<%= shortUrl.longUrl %>" target="_blank"><%= shortUrl.longUrl %></a></td>
+          <td><a class="shorturl" href="<%= shortUrl.shorturl %>" target="_blank"><%= shortUrl.shorturl %></a></td>
+        </tr>
         <% }) %>
       </tbody>
     </table>
@@ -59,4 +75,5 @@
 
   <script src="index.js"></script>
 </body>
+
 </html>
